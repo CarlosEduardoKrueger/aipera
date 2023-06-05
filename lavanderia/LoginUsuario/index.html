@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/32c3c1affa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastrar</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">LOGIN</h1>
+
+        <div class="wrapper-input">
+            <div class="form">
+                <input type="text" placeholder="Nome" id="login">
+                <input type="password" placeholder="Senha" id="senha">
+                <button>
+                    <a class="send" onclick="verifyAccount()">
+                        Entrar
+                    </a>
+                </button>
+                <div class="noAccount">
+                    <span>Nao possui uma conta?</span>
+                    <a href='../CadastroUser1/index.html'>Cadastre-se</a>
+                </div>
+            </div><!-- form -->
+        </div><!-- wrapper-input -->
+    </div><!-- wrapper -->
+
+    <footer>
+        <div class="waves">
+         <div class="wave" id="wave1"></div>
+         <div class="wave" id="wave2"></div>
+         <div class="wave" id="wave3"></div>
+         <div class="wave" id="wave4"></div>
+        </div>
+     </footer> 
+</body>
+
+<script>
+    function verifyAccount() {
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+  
+        // Aqui você pode fazer as verificações necessárias para autenticar o usuário
+        if (login === 'usuario' && senha === 'senha123') {
+            alert('Usuário autenticado com sucesso!');
+            window.location.href = "../TelaPrincipal/index.html";
+            return false;
+        } else {
+          alert('Credenciais inválidas. Tente novamente.');
+        }
+    }
+    
+</script>
+</html>
